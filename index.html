@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/table.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <title>Blend4Web</title>
+</head>
+<body>
+<div class="wrap wrap-main">
+    <div class="toolbar">
+        <div class="title table">Таблица цветов</div>
+        <button class="btn save-icon"></button>
+        <button class="btn close-icon"></button>
+    </div>
+    <div id="table-body" class="table-main">
+    </div>
+    <button id="showHideDiv" class="btn-addColor">Добавить цвет</button>
+</div>
+<div id="popupFrame" class="wrap popupFrame">
+    <div class="title popup">Добавление цвета</div>
+    <form>
+        <div class="name-color-set">
+            <div class="name-color">Название цвета</div>
+            <input class="input1" placeholder="Введите название" type="text">
+        </div>
+        <div class="name-color-set">
+            <div class="name-color">Выберите тип</div>
+            <select class="input2">
+                <option class="option" selected value="Main">Main</option>
+                <option class="option" value="Primary">Primary</option>
+                <option class="option" value="Secondary">Secondary</option>
+                <option class="option" value="Base">Base</option>
+            </select>
+        </div>
+        <div class="container-input-color">
+            <input type="color" class="input-color">
+        </div>
+        <my-webcomp></my-webcomp>
+    </form>
+</div>
+<div class="window3d wrap">
+    <div class="title webgl" >Окно 3D</div>
+    <canvas class="canvas" id="glCanvas" width="640px" height="361px"></canvas>
+</div>
+
+<template class="btn-add" id="btn-add">
+    <button class="btn-add">Добавить</button>
+</template>
+
+
+<script src="script.js"></script>
+<script src="./components/webgl.js"></script>
+</body>
+</html>

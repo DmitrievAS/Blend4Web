@@ -53,3 +53,20 @@ row_1.appendChild(heading_5);
 row_1.appendChild(heading_6);
 thead.appendChild(row_1);
 
+const form = document.getElementById("form");
+function retrieveFormValue(event) {
+    event.preventDefault();
+
+    const name = form.querySelector(`[name="name"]`),
+    type = form.querySelector(`[name="type"]`)
+    //color = form.querySelector(`[name="color"]`);
+
+    const values = {
+        name: name.value,
+        type: type.value,
+        //color: color.value
+    };
+    console.log(values);
+}
+
+form.addEventListener("submit");

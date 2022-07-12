@@ -21,14 +21,14 @@
 </div>
 <div id="popupFrame" class="wrap popupFrame">
     <div class="title popup">Добавление цвета</div>
-    <form>
+    <form id="form">
         <div class="name-color-set">
             <div class="name-color">Название цвета</div>
-            <input class="input1" placeholder="Введите название" type="text">
+            <input name="name" class="input1" placeholder="Введите название" type="text">
         </div>
         <div class="name-color-set">
             <div class="name-color">Выберите тип</div>
-            <select class="input2">
+            <select name="type" class="input2">
                 <option class="option" selected value="Main">Main</option>
                 <option class="option" value="Primary">Primary</option>
                 <option class="option" value="Secondary">Secondary</option>
@@ -36,7 +36,7 @@
             </select>
         </div>
         <div class="container-input-color">
-            <input type="color" class="input-color">
+            <input name="color" type="color" class="input-color">
         </div>
         <my-webcomp></my-webcomp>
     </form>
@@ -47,11 +47,13 @@
 </div>
 
 <template class="btn-add" id="btn-add">
-    <button class="btn-add">Добавить</button>
+    <button id="check" type="submit" class="btn-add">Добавить</button>
 </template>
 
 
 <script src="script.js"></script>
 <script src="./components/webgl.js"></script>
+
+
 </body>
 </html>
